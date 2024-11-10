@@ -1,3 +1,69 @@
+# S5 Project - Countdown Numbers Game
+
+This was one of the first C projects I coded in 2022.
+
+The rules are as follows: only strictly positive numbers are drawn, from 1 to 10 up to two times each, and 25, 50, 75, 100 appear only once each. The target must also be strictly positive and below 100,000.
+
+Note: The programs work well for games up to 8 draws using the predefined game files. Beyond this, the calculation times become significantly longer, even though nearly all proposed optimizations were implemented (except for commutativity in addition). Similar issues occur for randomly drawn games and games chosen by the user. It remains to be seen if this is due to limited computing power or inadequate algorithm optimization.
+
+About Algorithm 1:
+The file recapFonctions.c contains all functions essential to its operation.
+The library recapFonctions.h includes the function declarations and is imported at the beginning of algorithme1.c.
+
+How it works:
+The file is compiled using the command: make algorithme1.
+
+Once compiled, the executable file can be run in 3 different ways: user-selected game, random game, or game file.
+
+Without additional arguments (by command ./algorithme1): the program asks if this choice is desired.
+
+          If yes, the program asks if the user wants to search for a solution from a random game or a chosen game.
+
+          If random game: only the target will be requested, and the program will verify that the target follows the rules.
+
+          If chosen game: the user selects numbers and target, which are then checked for compliance with the rules.
+
+          If the game and target do not meet the rules, a new draw is initiated or the program stops, depending on user choice.
+
+With an additional argument (for example, with the command ./algorithme1 ./jeux/jeu7-2.txt): the program reads data (number of draws, drawn numbers, target) from the specified game file.
+
+The program checks if the game is already solved:
+
+          If so, it notifies the user with the message “game already solved.”
+
+          If a solution is found: the program notifies the user with the message "Bingo" and displays the operations and numbers used to reach the target.
+
+          If no combination works: the program displays the message “Oops.”
+
+About Algorithm 2:
+The file recapFonctions.c contains all functions essential to its operation.
+The library recapFonctions.h includes function declarations and is imported at the beginning of algorithme2.c.
+
+How it works:
+The file is compiled using the command: make algorithme2.
+
+Once compiled, the executable file can be run in 3 different ways: user-selected game, random game, or game file.
+
+Without additional arguments (by command ./algorithme2): the program asks if this choice is desired.
+
+          If yes, the program asks if the user wants to search for a solution from a random game or a chosen game.
+
+          If random game: only the target will be requested, and the program will verify that the target follows the rules.
+
+          If chosen game: the user selects numbers and target, which are then checked for compliance with the rules.
+
+          If the game and target do not meet the rules, a new draw is initiated or the program stops, depending on user choice.
+
+With an additional argument (for example, with the command ./algorithme2 ./jeux/jeu7-2.txt): the program reads data (number of draws, drawn numbers, target) from the specified game file.
+
+The program checks if the game is already solved:
+
+          If so, it notifies the user with the message “game already solved.”
+
+          If a solution is found: the program notifies the user with the message "Bingo" and displays the operations and numbers used to reach the target.
+
+          If no combination works: the program notifies the user with the message "No exact solution found, the closest result is: closest_result" and displays the operations and numbers used to achieve this closest result.
+
 # Projet S5 Compte est bon
 
 On rappelle les règles : nombres tirés sticts positifs, de 1 a 10 jusqu'à 2 exemplaires et 25, 50, 75, 100 en 1 exemplaire
